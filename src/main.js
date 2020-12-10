@@ -24,7 +24,7 @@ export default class App {
     }
     obtenerMultiplos(inicio, fin){
         let i = inicio;
-        let numerosMultiplos = '';
+        let numerosMultiplos = '' + ',';
         do{
             if(i % 3 === 0){
                 numerosMultiplos = numerosMultiplos + i;
@@ -37,17 +37,30 @@ export default class App {
         
     }
     esPrimo(numero){
-        let i = 0;
+        let i = 1;
+        let suma = 0;
         do{
-            if(numero % 2 === 0){
-                return false;
-            }else if(numero % 2 !== 0 ){
-                return true;
+            if(numero % i === 0){
+                suma++;
+                i++;
+            }else{
+                i++;
             }
-            i++;
 
         }while(i <= numero);
+        if(suma === 2){
+            return true;
+        }else{
+            return false;
+        }
     }
+    obtenerImpares(numero1, numero2){
+
+        
+    
+    }
+    
+
        
     
 
@@ -57,4 +70,5 @@ let app = new App();
 console.log(app.sumatoriaSerieUno(7));
 console.log(app.sumatoriaSerieDos(4));
 console.log(app.obtenerMultiplos(10, 25));
-console.log(app.esPrimo(17));
+console.log(app.esPrimo(2));
+console.log(app.obtenerImpares(5, 20));
