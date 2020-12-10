@@ -22,10 +22,39 @@ export default class App {
         }
         return suma;
     }
+    obtenerMultiplos(inicio, fin){
+        let i = inicio;
+        let numerosMultiplos = '';
+        do{
+            if(i % 3 === 0){
+                numerosMultiplos = numerosMultiplos + i;
+            }
+            i++;
+            
+        } while(i <= fin);
+        return numerosMultiplos;
+        
+        
+    }
+    esPrimo(numero){
+        let i = 0;
+        do{
+            if(numero % 2 === 0){
+                return false;
+            }else if(numero % 2 !== 0 ){
+                return true;
+            }
+            i++;
 
+        }while(i <= numero);
+    }
+       
+    
 
 }
 
 let app = new App();
 console.log(app.sumatoriaSerieUno(7));
 console.log(app.sumatoriaSerieDos(4));
+console.log(app.obtenerMultiplos(10, 25));
+console.log(app.esPrimo(17));
