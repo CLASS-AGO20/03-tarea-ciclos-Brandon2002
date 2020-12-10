@@ -24,7 +24,7 @@ export default class App {
     }
     obtenerMultiplos(inicio, fin){
         let i = inicio;
-        let numerosMultiplos = '' + ',';
+        let numerosMultiplos = '';
         do{
             if(i % 3 === 0){
                 numerosMultiplos = numerosMultiplos + i;
