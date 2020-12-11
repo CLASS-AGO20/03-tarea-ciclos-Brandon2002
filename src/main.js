@@ -55,9 +55,25 @@ export default class App {
         }
     }
     obtenerImpares(numero1, numero2){
+       if(numero1 > numero2){
+           let nuevoNumero1 = numero1;
+           numero1 = numero2;
+           numero2 = nuevoNumero1;
+       }else{
 
-        
-    
+       }
+       let i = numero1;
+       let impares = '';
+        do{
+            if(i % 2 !== 0){
+                impares = String(i) + "," + impares;
+                
+            }else{
+
+            }
+            i++;
+        }while(i <= numero2);
+        return impares;
     }
     
 
