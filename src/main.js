@@ -63,7 +63,7 @@ export default class App {
 
        }
        let i = numero1;
-       let impares = '';
+       let impares = "";
         do{
             if(i % 2 !== 0){
                 impares = String(i) + "," + impares;
@@ -73,7 +73,7 @@ export default class App {
             }
             i++;
         }while(i <= numero2);
-        return impares;
+        return impares.substr(0,impares.length-1)
     }
     
 
